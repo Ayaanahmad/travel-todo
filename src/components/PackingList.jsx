@@ -23,17 +23,23 @@ const PackingList = ({ items, onDeleteItem, onUpdateToggle, onClearList }) => {
   }
 
   return (
-    <div className="list">
-      <ul>
-        {sortedItems?.map((item) => (
-          <Item
-            item={item}
-            onDeleteItem={onDeleteItem}
-            onUpdateToggle={onUpdateToggle}
-            key={item?.id}
-          />
-        ))}
-      </ul>
+    <>
+      <div className="list">
+        {items?.length ? (
+          <ul>
+            {sortedItems?.map((item) => (
+              <Item
+                item={item}
+                onDeleteItem={onDeleteItem}
+                onUpdateToggle={onUpdateToggle}
+                key={item?.id}
+              />
+            ))}
+          </ul>
+        ) : (
+          <p>Start adding your items here📜</p>
+        )}
+      </div>
       <div className="actions">
         <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
           <option value="input">Sort by input order</option>
@@ -48,7 +54,7 @@ const PackingList = ({ items, onDeleteItem, onUpdateToggle, onClearList }) => {
           Clear List
         </button>
       </div>
-    </div>
+    </>
   );
 };
 
