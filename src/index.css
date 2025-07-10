@@ -16,7 +16,8 @@ body {
   color: #5a3e2b;
   font-family: "Quicksand";
   font-weight: 500;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .app {
@@ -100,7 +101,7 @@ input {
   padding: 0.8rem 2.4rem;
   font-size: 1.4rem;
   font-weight: 700;
-  margin: 0 0.8rem;
+  /* margin: 0 0.8rem; */
 }
 
 .list ul {
@@ -275,13 +276,13 @@ input[type="checkbox"] {
   }
   .actions {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     gap: 2rem;
     select,
     button {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 }
