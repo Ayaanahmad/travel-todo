@@ -344,11 +344,12 @@ input[type="checkbox"] {
     }
   }
 
+  .app{
+    min-height: 90vh;
+  }
+
   .list p {
     font-size: 2rem;
-  }
-  body {
-    overflow: hidden;
   }
 }
 @media screen and (max-width: 393px) {
